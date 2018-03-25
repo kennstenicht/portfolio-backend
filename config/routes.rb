@@ -3,6 +3,7 @@ module Api::V1
     namespace :api do
       namespace :v1 do
         jsonapi_resources :projects
+        jsonapi_resources :pages
       end
     end
   end
