@@ -4,6 +4,7 @@ module Api::V1
       namespace :v1 do
         jsonapi_resources :projects
         jsonapi_resources :pages
+        jsonapi_resources :users
       end
     end
   end
