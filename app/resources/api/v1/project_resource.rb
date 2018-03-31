@@ -1,5 +1,5 @@
 module Api::V1
   class ProjectResource < BaseResource
-    attributes :title, :slug, :subtitle, :position, :visible, :excerpt, :meta_info
+    attributes :title, :slug, :subtitle, :excerpt, :meta_info, :content, :position, :visible
   end
 end

@@ -4,8 +4,9 @@ class CreateProjects < ActiveRecord::Migration[5.1]
       t.string :title
       t.string :slug
       t.string :subtitle
-      t.string :excerpt
-      t.string :meta_info
+      t.text :excerpt
+      t.text :meta_info
+      t.text :content
       t.boolean :visible
       t.integer :position
 

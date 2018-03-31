@@ -28,8 +28,9 @@ ActiveRecord::Schema.define(version: 20180323172500) do
     t.string "title"
     t.string "slug"
     t.string "subtitle"
-    t.string "excerpt"
-    t.string "meta_info"
+    t.text "excerpt"
+    t.text "meta_info"
+    t.text "content"
     t.boolean "visible"
     t.integer "position"
     t.datetime "created_at", null: false
