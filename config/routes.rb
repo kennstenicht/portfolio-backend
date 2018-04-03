@@ -8,6 +8,7 @@ module Api::V1
           jsonapi_resources :projects
           jsonapi_resources :pages
           jsonapi_resources :users
+          jsonapi_resources :custom_fields
         end
       end
     end

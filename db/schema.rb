@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180323172500) do
+ActiveRecord::Schema.define(version: 20180402115158) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "custom_fields", force: :cascade do |t|
+    t.string "key"
+    t.string "value"
+    t.string "field_type"
+    t.text "description"
+    t.bigint "page_id"
+    t.bigint "project_id"
+    t.index ["page_id"], name: "index_custom_fields_on_page_id"
+    t.index ["project_id"], name: "index_custom_fields_on_project_id"
+  end
 
   create_table "mobility_string_translations", force: :cascade do |t|
     t.string "locale"
@@ -70,4 +81,6 @@ ActiveRecord::Schema.define(version: 20180323172500) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "custom_fields", "pages"
+  add_foreign_key "custom_fields", "projects"
 end
