@@ -81,6 +81,4 @@ ActiveRecord::Schema.define(version: 20180402115158) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "custom_fields", "pages"
-  add_foreign_key "custom_fields", "projects"
 end

@@ -6,8 +6,8 @@ class CreateCustomFields < ActiveRecord::Migration[5.1]
       t.string :field_type
       t.text :description
 
-      t.references :page, foreign_key: true
-      t.references :project, foreign_key: true
+      t.references :page
+      t.references :project
     end
   end
 end
