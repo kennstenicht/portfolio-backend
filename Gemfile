@@ -12,13 +12,13 @@ gem 'pg',                       '>= 0.18', '< 2.0'
 gem 'puma',                     '~> 3.7'
 
 # API
-gem 'jsonapi-resources',        '~> 0.9.0'
-gem 'jsonapi-authorization',    '~> 1.0.0.alpha6'
+gem 'jsonapi-resources',        '~> 0.9.3'
+gem 'jsonapi-authorization',    '~> 1.0.0.beta2'
 gem 'knock'
 gem 'rack-cors'
 
 # Translation
-gem 'mobility',                  '~> 0.5.1'
+gem 'mobility',                  '~> 0.8.4'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
