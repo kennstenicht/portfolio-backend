@@ -8,17 +8,19 @@ class ApplicationController < JSONAPI::ResourceController
     { locale: I18n.locale }
   end
 
-  def set_locale
-    I18n.locale = params[:locale] || I18n.default_locale
-  end
-
   private
 
-  def context
-    {user: current_user}
+  def set_locale
+    I18n.locale = params[:locale]
   end
 
   def user_not_authorized
     head :forbidden
+  end
+
+  def context
+    {
+      user: current_user
+    }
   end
 end
