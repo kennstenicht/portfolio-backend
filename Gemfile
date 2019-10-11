@@ -5,29 +5,34 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
 # Rails and database
-gem 'rails',                    '~> 5.1.5'
-gem 'pg',                       '>= 0.18', '< 2.0'
-gem 'puma',                     '~> 3.7'
+gem 'pg', '>= 0.18', '< 2.0'
+gem 'puma', '~> 3.7'
+gem 'rails', '~> 5.1'
 
 # API
-gem 'jsonapi-resources',        '~> 0.9.3'
-gem 'jsonapi-authorization',    '~> 1.0.0.beta2'
+gem 'jsonapi-authorization', '~> 3.0.1'
+gem 'jsonapi-resources', '~> 0.9.10'
 gem 'knock'
 gem 'rack-cors'
 
-# Translation
-gem 'mobility',                  '~> 0.8.4'
+# Slug & Translation
+gem 'friendly_id', '~> 5.1.0'
+gem 'friendly_id-mobility', '~> 0.5.3'
+gem 'mobility', '~> 0.8.4'
+
+# Misc
+gem 'rubocop', require: false
+gem 'sitemap_generator'
+gem 'validate_url'
+gem 'whenever', require: false
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :development do
-  gem 'listen',                 '>= 3.0.5', '< 3.2'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen',  '~> 2.0.0'
 end
