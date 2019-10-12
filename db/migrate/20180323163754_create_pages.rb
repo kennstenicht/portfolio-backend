@@ -1,9 +1,9 @@
 class CreatePages < ActiveRecord::Migration[5.1]
   def change
     create_table :pages do |t|
-      t.string :title
+      t.jsonb :title, default: {}, null: false
       t.string :slug
-      t.text :content
+      t.jsonb :content, default: {}
       t.integer :position
 
       t.timestamps

@@ -10,63 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180402115158) do
+ActiveRecord::Schema.define(version: 2018_04_02_115158) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "custom_fields", force: :cascade do |t|
     t.string "key"
-    t.string "value"
+    t.jsonb "value", default: {}
     t.string "field_type"
-    t.text "description"
+    t.jsonb "description", default: {}
     t.bigint "page_id"
     t.bigint "project_id"
     t.index ["page_id"], name: "index_custom_fields_on_page_id"
     t.index ["project_id"], name: "index_custom_fields_on_project_id"
   end
 
-  create_table "mobility_string_translations", force: :cascade do |t|
-    t.string "locale"
-    t.string "key"
-    t.string "value"
-    t.integer "translatable_id"
-    t.string "translatable_type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["translatable_id", "translatable_type", "key"], name: "index_mobility_string_translations_on_translatable_attribute"
-    t.index ["translatable_id", "translatable_type", "locale", "key"], name: "index_mobility_string_translations_on_keys", unique: true
-    t.index ["translatable_type", "key", "value", "locale"], name: "index_mobility_string_translations_on_query_keys"
-  end
-
-  create_table "mobility_text_translations", force: :cascade do |t|
-    t.string "locale"
-    t.string "key"
-    t.text "value"
-    t.integer "translatable_id"
-    t.string "translatable_type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["translatable_id", "translatable_type", "key"], name: "index_mobility_text_translations_on_translatable_attribute"
-    t.index ["translatable_id", "translatable_type", "locale", "key"], name: "index_mobility_text_translations_on_keys", unique: true
-  end
-
   create_table "pages", force: :cascade do |t|
-    t.string "title"
+    t.jsonb "title", default: {}, null: false
     t.string "slug"
-    t.text "content"
+    t.jsonb "content", default: {}
     t.integer "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "projects", force: :cascade do |t|
-    t.string "title"
+    t.jsonb "title", default: {}, null: false
+    t.jsonb "subtitle", default: {}, null: false
     t.string "slug"
-    t.string "subtitle"
-    t.text "excerpt"
-    t.text "meta_info"
-    t.text "content"
+    t.jsonb "excerpt", default: {}
+    t.jsonb "meta_info", default: {}
+    t.jsonb "content", default: {}
     t.boolean "visible"
     t.integer "position"
     t.datetime "created_at", null: false
