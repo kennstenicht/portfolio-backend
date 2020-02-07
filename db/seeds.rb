@@ -34,22 +34,26 @@ Page.create([
                 title: 'Startseite',
                 slug: 'home',
                 position: 0,
-                content: create_mobiledoc('test')
+                content: create_mobiledoc('test'),
+                visible: true
               }, {
                 title: 'Über mich',
                 slug: 'about',
                 position: 1,
-                content: create_mobiledoc("christoph wiedenmann\nringbahnstraße 33")
+                content: create_mobiledoc("christoph wiedenmann\nringbahnstraße 33"),
+                visible: true
               }, {
                 title: 'Impressum',
                 slug: 'imprint',
                 position: 2,
-                content: create_mobiledoc('test')
+                content: create_mobiledoc('test'),
+                visible: true
               }, {
                 title: 'Datenschutz',
                 slug: 'date-protection',
                 position: 3,
-                content: create_mobiledoc('test')
+                content: create_mobiledoc('test'),
+                visible: true
               }
             ])
 
@@ -61,50 +65,60 @@ projects = Project.create([
                               title: 'EELS',
                               slug: 'eels',
                               subtitle: 'analog-digital-analog-digital-analog',
-                              meta_info: create_mobiledoc('test'),
+                              facts: create_mobiledoc('test'),
                               excerpt: create_mobiledoc('test'),
-                              visible: true,
                               content: create_mobiledoc('test'),
+                              meta_title: 'EELS',
+                              meta_description: 'Lorem ipsum',
+                              visible: true,
                               position: 0
                             },
                             {
                               title: 'Ad Hoc',
                               slug: 'ad-hoc',
                               subtitle: 'Verbindungssuche mit Turn-By-Turn Navigation im Öffentlichen Nahverkehr',
-                              meta_info: create_mobiledoc('test'),
+                              facts: create_mobiledoc('test'),
                               excerpt: create_mobiledoc('test'),
-                              visible: true,
                               content: create_mobiledoc('test'),
+                              meta_title: 'Ad Hox',
+                              meta_description: 'Lorem ipsum',
+                              visible: true,
                               position: 1
                             },
                             {
                               title: 'Disaster MGMT',
                               slug: 'disaster-mgmt',
                               subtitle: 'Subtitle',
-                              meta_info: create_mobiledoc('test'),
+                              facts: create_mobiledoc('test'),
                               excerpt: create_mobiledoc('test'),
-                              visible: true,
                               content: create_mobiledoc('test'),
+                              meta_title: 'Disaster MGMT',
+                              meta_description: 'Lorem ipsum',
+                              visible: true,
                               position: 2
                             },
                             {
                               title: 'Binuu',
                               slug: 'binuu',
                               subtitle: 'Laut, grell, GROSS - kickt Einheitsbrei!',
-                              meta_info: create_mobiledoc('test'),
+                              facts: create_mobiledoc('test'),
                               excerpt: create_mobiledoc('test'),
-                              visible: true,
                               content: create_mobiledoc('test'),
+                              meta_title: 'Binuu',
+                              meta_description: 'Lorem ipsum',
+                              visible: true,
                               position: 3
                             },
                             {
                               title: 'FLUT:koerper',
                               slug: 'flutkoerper',
                               subtitle: 'Subtitle',
-                              meta_info: create_mobiledoc('test'),
+                              facts: create_mobiledoc('test'),
                               excerpt: create_mobiledoc('test'),
-                              visible: true,
                               content: create_mobiledoc('test'),
+                              meta_title: 'FLUT:koerper',
+                              meta_description: 'Lorem ipsum',
+                              visible: true,
                               position: 4
                             }
                           ])

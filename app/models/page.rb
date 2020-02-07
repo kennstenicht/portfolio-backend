@@ -3,8 +3,10 @@
 class Page < ApplicationRecord
   # Translation
   extend Mobility
-  translates :title,
-             :content, fallbacks: { de: :en, en: :de }
+  translates :content,
+             :meta_title,
+             :meta_description,
+             :title, fallbacks: { de: :en, en: :de }
 
   # Relationship
   has_many :custom_fields

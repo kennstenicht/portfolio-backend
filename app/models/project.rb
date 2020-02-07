@@ -3,11 +3,13 @@
 class Project < ApplicationRecord
   # Translation
   extend Mobility
-  translates :title,
-             :subtitle,
+  translates :content,
              :excerpt,
-             :meta_info,
-             :content, fallbacks: { en: :de }
+             :facts,
+             :meta_title,
+             :meta_description,
+             :subtitle,
+             :title, fallbacks: { en: :de }
 
   # Relationship
   has_many :custom_fields

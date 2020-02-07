@@ -4,7 +4,9 @@ module V1
   class ProjectResource < BaseResource
     attributes :content,
                :excerpt,
-               :meta_info,
+               :facts,
+               :meta_title,
+               :meta_description,
                :position,
                :slug,
                :subtitle,

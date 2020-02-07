@@ -3,9 +3,12 @@
 module V1
   class PageResource < BaseResource
     attributes :content,
+               :meta_title,
+               :meta_description,
                :position,
                :slug,
-               :title
+               :title,
+               :visible
 
     has_many :custom_fields
 
