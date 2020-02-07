@@ -8,7 +8,7 @@ end
 # Rails and database
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.7'
-gem 'rails', '~> 5.1'
+gem 'rails', '~> 5.2.3'
 
 # API
 gem 'jsonapi-authorization', '~> 3.0.1'
@@ -26,6 +26,9 @@ gem 'rubocop', require: false
 gem 'sitemap_generator'
 gem 'validate_url'
 gem 'whenever', require: false
+
+# Caching
+gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
