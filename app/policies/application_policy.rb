@@ -49,7 +49,11 @@ class ApplicationPolicy
     end
 
     def resolve
-      scope.all
+      new_scope = scope.all
+
+      new_scope = new_scope.where(visible: true) if user.nil?
+
+      new_scope
     end
   end
 end
