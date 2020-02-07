@@ -1,0 +1,13 @@
+AllCops:
+  Exclude:
+    - 'db/**/*.rb'
+    - 'spec/**/*.rb'
+    - 'bin/*'
+
+Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Enabled: true
+  Exclude:
+    - 'config/**/*.rb'

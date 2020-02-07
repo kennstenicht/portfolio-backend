@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ApplicationController < JSONAPI::ResourceController
   include Knock::Authenticable
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized

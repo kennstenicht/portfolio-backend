@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Page < ApplicationRecord
   # Translation
   extend Mobility
@@ -7,6 +9,6 @@ class Page < ApplicationRecord
   # Relationship
   has_many :custom_fields
 
-    # Validations
-    validates :title, presence: true
+  # Validations
+  validates :title, presence: true
 end
