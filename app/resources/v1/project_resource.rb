@@ -8,6 +8,7 @@ module V1
                :meta_title,
                :meta_description,
                :position,
+               :role,
                :slug,
                :subtitle,
                :title,

@@ -8,6 +8,7 @@ class Project < ApplicationRecord
              :facts,
              :meta_title,
              :meta_description,
+             :role,
              :subtitle,
              :title, fallbacks: { en: :de }
 

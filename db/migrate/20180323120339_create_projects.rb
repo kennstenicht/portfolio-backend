@@ -9,6 +9,7 @@ class CreateProjects < ActiveRecord::Migration[5.1]
       t.jsonb :meta_description, default: {}
       t.jsonb :meta_title, default: {}
       t.integer :position
+      t.jsonb :role, default: {}
       t.string :slug
       t.jsonb :subtitle, default: {}, null: false
       t.jsonb :title, default: {}, null: false

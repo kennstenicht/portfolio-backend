@@ -22,7 +22,7 @@ User.create([
               {
                 name: 'Christoph Wiedenmann',
                 email: 'christoph@ag-prop.com',
-                password: '12345678'
+                password: '1'
               }
             ])
 
@@ -68,8 +68,7 @@ projects = Project.create([
                               facts: create_mobiledoc('test'),
                               excerpt: create_mobiledoc('test'),
                               content: create_mobiledoc('test'),
-                              meta_title: 'EELS',
-                              meta_description: 'Lorem ipsum',
+                              role: 'Konzeption und Umsetzung',
                               visible: true,
                               position: 0
                             },
@@ -80,8 +79,7 @@ projects = Project.create([
                               facts: create_mobiledoc('test'),
                               excerpt: create_mobiledoc('test'),
                               content: create_mobiledoc('test'),
-                              meta_title: 'Ad Hox',
-                              meta_description: 'Lorem ipsum',
+                              role: 'Konzeption und Design',
                               visible: true,
                               position: 1
                             },
@@ -92,8 +90,7 @@ projects = Project.create([
                               facts: create_mobiledoc('test'),
                               excerpt: create_mobiledoc('test'),
                               content: create_mobiledoc('test'),
-                              meta_title: 'Disaster MGMT',
-                              meta_description: 'Lorem ipsum',
+                              role: 'Konzeption, Design und Entwicklung',
                               visible: true,
                               position: 2
                             },
@@ -104,8 +101,7 @@ projects = Project.create([
                               facts: create_mobiledoc('test'),
                               excerpt: create_mobiledoc('test'),
                               content: create_mobiledoc('test'),
-                              meta_title: 'Binuu',
-                              meta_description: 'Lorem ipsum',
+                              role: 'Entwicklung',
                               visible: true,
                               position: 3
                             },
@@ -116,8 +112,6 @@ projects = Project.create([
                               facts: create_mobiledoc('test'),
                               excerpt: create_mobiledoc('test'),
                               content: create_mobiledoc('test'),
-                              meta_title: 'FLUT:koerper',
-                              meta_description: 'Lorem ipsum',
                               visible: true,
                               position: 4
                             }
