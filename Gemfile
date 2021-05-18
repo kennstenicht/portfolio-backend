@@ -9,7 +9,7 @@ end
 
 # Rails and database
 gem 'pg', '>= 0.18', '< 2.0'
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 4.3'
 gem 'rails', '~> 5.2.3'
 
 # API
